@@ -1,0 +1,205 @@
+.page {
+  background: #F9F8FF;
+  min-height: 100vh;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+  border-bottom: 0.5px solid rgba(83, 74, 183, 0.1);
+}
+
+.back {
+  font-size: 13px;
+  color: #8C85C0;
+  transition: color 0.2s;
+}
+.back:hover { color: #26215C; }
+
+.printBtn {
+  font-size: 12px;
+  padding: 8px 20px;
+  border-radius: 99px;
+  border: 0.5px solid rgba(83, 74, 183, 0.3);
+  background: transparent;
+  color: #534AB7;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.printBtn:hover {
+  background: rgba(83, 74, 183, 0.06);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: calc(100vh - 73px);
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  padding: 48px 32px 64px;
+  border-right: 0.5px solid rgba(83, 74, 183, 0.08);
+  background: #F4F3FC;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.identity { display: flex; flex-direction: column; gap: 6px; }
+
+.name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #26215C;
+  letter-spacing: -0.5px;
+}
+
+.role {
+  font-size: 13px;
+  color: #8C85C0;
+}
+
+.sideSection { display: flex; flex-direction: column; gap: 8px; }
+
+.sideLabel {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(83, 74, 183, 0.45);
+  margin-bottom: 4px;
+}
+
+.sideLink {
+  font-size: 12px;
+  color: #534AB7;
+  word-break: break-all;
+}
+.sideLink:hover { text-decoration: underline; }
+
+.sideText { font-size: 12px; color: #8C85C0; }
+
+.skill {
+  font-size: 12px;
+  color: #534AB7;
+  background: rgba(83, 74, 183, 0.07);
+  border: 0.5px solid rgba(83, 74, 183, 0.15);
+  border-radius: 99px;
+  padding: 3px 10px;
+  display: inline-block;
+  margin: 2px 2px 0 0;
+}
+
+.lang {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #26215C;
+}
+.langLevel { color: #8C85C0; font-size: 12px; }
+
+.cert { display: flex; flex-direction: column; gap: 2px; margin-bottom: 8px; }
+.certName { font-size: 12px; color: #26215C; font-weight: 500; line-height: 1.4; }
+.certMeta { font-size: 11px; color: #8C85C0; }
+
+/* ── Main ── */
+.main {
+  padding: 48px 56px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section { display: flex; flex-direction: column; gap: 24px; }
+
+.sectionLabel {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #534AB7;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid rgba(83, 74, 183, 0.1);
+}
+.sectionLabel::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: #534AB7;
+  display: block;
+}
+
+.prose {
+  font-size: 14px;
+  color: #5A5490;
+  line-height: 1.8;
+}
+
+/* Experience */
+.expItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 28px;
+  border-bottom: 0.5px solid rgba(83, 74, 183, 0.07);
+}
+.expItem:last-child { border-bottom: none; padding-bottom: 0; }
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.expRole { font-size: 15px; font-weight: 600; color: #26215C; }
+.expCompany { font-size: 13px; color: #8C85C0; margin-top: 2px; }
+.expPeriod { font-size: 12px; color: #8C85C0; white-space: nowrap; padding-top: 2px; }
+
+.expList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.expList li {
+  font-size: 13px;
+  color: #5A5490;
+  line-height: 1.65;
+  padding-left: 14px;
+  position: relative;
+}
+
+.expList li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: rgba(83, 74, 183, 0.4);
+}
+
+/* Education */
+.eduItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid rgba(83, 74, 183, 0.07);
+}
+.eduItem:last-child { border-bottom: none; }
+.eduDesc { font-size: 12px; color: #8C85C0; line-height: 1.6; }
+
+/* Print */
+@media print {
+  .topBar { display: none; }
+  .page { background: #fff; }
+  .sidebar { background: #F4F3FC; }
+  .layout { grid-template-columns: 220px 1fr; }
+  .main { padding: 32px 40px 40px; }
+}

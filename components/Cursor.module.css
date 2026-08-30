@@ -1,0 +1,36 @@
+.dot {
+  position: fixed;
+  top: -3px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  background: #E8EEFF;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  transition: opacity 0.2s;
+}
+
+.ring {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(127, 136, 184, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  will-change: transform;
+  transition: width 0.25s ease, height 0.25s ease, top 0.25s ease, left 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.ring.hover {
+  width: 64px;
+  height: 64px;
+  top: -32px;
+  left: -32px;
+  border-color: #534AB7;
+  background: rgba(83, 74, 183, 0.08);
+}
