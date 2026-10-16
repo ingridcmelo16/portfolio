@@ -34,3 +34,11 @@
   border-color: #534AB7;
   background: rgba(83, 74, 183, 0.08);
 }
+
+@media (hover: none), (pointer: coarse), (max-width: 860px) {
+  .cursor,
+  .dot,
+  .ring,
+  .follower,
+  .label { display: none !important; }
+}

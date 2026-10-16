@@ -12,7 +12,7 @@ export default function MarketIntelCase() {
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
           <span className={`${styles.pill} ${styles.pillAccent}`}>Produto · Beta</span>
-          <span className={styles.pill}>2025</span>
+          <span className={styles.pill}>Abr 2026</span>
           <span className={styles.pill}>15 dias · Claude Code</span>
         </div>
         <h1 className={styles.heroTitle}>Inteligência<br />de Mercado</h1>
@@ -26,16 +26,22 @@ export default function MarketIntelCase() {
           <div className={styles.coverOrb1} />
           <div className={styles.coverOrb2} />
           <div className={styles.coverOrb3} />
-          <div className={styles.coverInner}>
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="56" height="56" rx="16" fill="rgba(175,169,236,0.1)"/>
-              <path d="M14 40V28M21 40V22M28 40V18M35 40V25M42 40V31" stroke="#AFA9EC" strokeWidth="1.8" strokeLinecap="round"/>
-              <circle cx="42" cy="18" r="5" stroke="#BCC8F5" strokeWidth="1.5"/>
-              <path d="M28 18L35 14L42 18" stroke="#BCC8F5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <p className={styles.coverTagline}>Market Intel · Farma · IA</p>
+          <div className={styles.coverShot}>
+            <div className={styles.coverBar}>
+              <span className={styles.coverDot} />
+              <span className={styles.coverDot} />
+              <span className={styles.coverDot} />
+            </div>
+            <img
+              src="/work/market-intel/home.webp"
+              alt="Tela inicial do Inteligência de Mercado: indicadores de share, movimentos do período e acessos rápidos"
+              className={styles.coverImg}
+            />
           </div>
         </div>
+        <p className={styles.coverNote}>
+          Instância de demonstração — todos os números e nomes de produto na tela são fictícios.
+        </p>
 
         <div className={styles.stats}>
           <div className={styles.stat}>
@@ -51,8 +57,8 @@ export default function MarketIntelCase() {
             <span className={styles.statLabel}>Dev Virtual autônomo</span>
           </div>
           <div className={styles.stat}>
-            <span className={styles.statNum}>0</span>
-            <span className={styles.statLabel}>dev humano no loop</span>
+            <span className={styles.statNum}>2</span>
+            <span className={styles.statLabel}>clientes fechados a partir do beta</span>
           </div>
         </div>
       </section>
@@ -80,12 +86,29 @@ export default function MarketIntelCase() {
             <span className={styles.sidebarValue}>Beta</span>
           </div>
           <div className={styles.sidebarItem}>
-            <span className={styles.sidebarLabel}>Ano</span>
-            <span className={styles.sidebarValue}>2025</span>
+            <span className={styles.sidebarLabel}>Data</span>
+            <span className={styles.sidebarValue}>Abril de 2026</span>
           </div>
         </aside>
 
         <main className={styles.content}>
+
+          <div className={styles.disclosure}>
+            <svg className={styles.disclosureIcon} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 1.5L15 4v5c0 3.6-2.5 6.5-6 7.5-3.5-1-6-3.9-6-7.5V4l6-2.5z" stroke="#534AB7" strokeWidth="1.3" strokeLinejoin="round"/>
+              <path d="M6.5 9l1.8 1.8L11.8 7" stroke="#534AB7" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <div>
+              <p className={styles.disclosureTitle}>Sobre o que está publicado aqui</p>
+              <p className={styles.disclosureText}>
+                Este case usa apenas informação que a Plannera já divulgou publicamente sobre o
+                produto. As telas vêm de uma instância de demonstração: os números, os nomes de
+                produto e os percentuais são fictícios. Não há dado de cliente, nome de pessoa,
+                número de operação, credencial ou estrutura interna de banco — em linha com a LGPD
+                e com os acordos de confidencialidade dos clientes.
+              </p>
+            </div>
+          </div>
 
           <div className={styles.section}>
             <p className={styles.sectionLabel}>Contexto</p>
@@ -198,6 +221,21 @@ export default function MarketIntelCase() {
           </div>
 
           <div className={styles.section}>
+            <p className={styles.sectionLabel}>Resultado</p>
+            <h2 className={styles.sectionTitle}>O beta virou<br />argumento comercial.</h2>
+            <p className={styles.prose}>
+              O produto não foi construído para existir — foi construído para ser mostrado. E foi
+              isso que aconteceu: <strong>dois clientes fecharam a partir do beta</strong>, num
+              ciclo bem mais curto que o normal da empresa. Em B2B de supply chain o funil é longo,
+              porque a decisão passa por várias áreas e quase sempre começa com uma apresentação.
+              Aqui a conversa começou com o produto rodando.
+              <br /><br />
+              O aprendizado de produto é esse: quinze dias de construção compraram meses de
+              discussão comercial. Não porque o beta era completo, mas porque ele era real.
+            </p>
+          </div>
+
+          <div className={styles.section}>
             <p className={styles.sectionLabel}>Aprendizados</p>
             <h2 className={styles.sectionTitle}>O que mudou<br />na forma de trabalhar.</h2>
             <div className={styles.learnings}>
@@ -230,6 +268,14 @@ export default function MarketIntelCase() {
 
         </main>
       </div>
+
+      <footer className={styles.footer}>
+        <p>
+          As telas deste case são de uma instância de demonstração. Todos os dados exibidos —
+          share, volumes, nomes de produto e variações — são fictícios e não representam nenhum
+          cliente real da Plannera.
+        </p>
+      </footer>
 
     </div>
   )

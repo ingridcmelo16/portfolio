@@ -7,8 +7,8 @@ const experiences = [
     period: "2024 —\nAtual",
     title: "Product Designer",
     company: "Plannera",
-    desc: "Responsável pelo design de S&OP, S&OE/Abast, Inteligência de Mercado e produtos internos. Conduz todo o ciclo — research, definição, prototipação, testes e handoff — com contato direto com clientes como Coca-Cola, Hortifruti e Lindt.",
-    tags: ["UX Research", "UI Design", "Design System", "Testes de Usabilidade", "S&OP"],
+    desc: "Responsável pelo design de S&OP, S&OE/Abast, Inteligência de Mercado, Gaia e produtos internos. Conduzo o ciclo inteiro — research, definição, prototipação, testes, handoff e implementação. A pesquisa é feita direto com os times de planejamento de clientes enterprise como Coca-Cola, Hortifruti e Lindt, e os achados viram decisão de produto junto com PO e CTO.",
+    tags: ["UX Research", "Clientes enterprise", "Design System", "IA aplicada", "S&OP"],
   },
   {
     period: "2023",

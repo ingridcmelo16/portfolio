@@ -6,7 +6,7 @@ import styles from "./About.module.css"
 const stats = [
   { to: 3, suffix: "+", label: "anos de experiência em UX" },
   { to: 4, suffix: "", label: "produtos B2B end-to-end" },
-  { to: 25, suffix: "+", label: "clientes impactados" },
+  { to: 40, suffix: "+", label: "clientes impactados" },
 ]
 
 const skills = [
@@ -105,6 +105,11 @@ export function About() {
           Sou Product Designer com foco em produtos B2B complexos — da pesquisa com usuário
           até a entrega em código. IA faz parte de cada etapa do meu processo:
           research, síntese, prototipação e handoff.
+          <br /><br />
+          A pesquisa é feita direto com quem usa, dentro de operações grandes — entrevisto
+          planejadores, gerentes de supply e diretores em clientes como
+          <strong> Coca-Cola, Hortifruti e Lindt</strong>, sem camada de intermediação. É o que
+          me permite decidir sem depender de suposição sobre o usuário.
           <br /><br />
           Formada em <strong>Estudos de Mídia pela UFF</strong> e cursando
           <strong> MBA em Inovação orientada a IA e UX</strong>. Comecei como Designer Gráfica

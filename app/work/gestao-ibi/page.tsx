@@ -69,6 +69,9 @@ export default function GestaoIbiCase() {
             </div>
           </div>
         </div>
+        <p className={styles.coverNote}>
+          Representação da interface — as telas reais não podem ser publicadas.
+        </p>
 
         {/* Stats */}
         <div className={styles.stats}>
@@ -118,6 +121,27 @@ export default function GestaoIbiCase() {
 
         {/* Main content */}
         <main className={styles.content}>
+
+          <div className={styles.disclosure}>
+            <svg className={styles.disclosureIcon} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3.5" y="7.8" width="11" height="7.7" rx="1.6" stroke="#534AB7" strokeWidth="1.3"/>
+              <path d="M6 7.8V5.6a3 3 0 016 0v2.2" stroke="#534AB7" strokeWidth="1.3" strokeLinecap="round"/>
+            </svg>
+            <div>
+              <p className={styles.disclosureTitle}>Por que não há telas reais neste case</p>
+              <p className={styles.disclosureText}>
+                A plataforma do Instituto Brasil-Israel trabalha com dados sensíveis de projetos
+                educacionais — pessoas envolvidas, orçamentos, avaliações e documentos internos.
+                Nada disso pode ser publicado, nem desfocado: imagem borrada ainda carrega estrutura,
+                nomes parciais e valores legíveis sob zoom.
+                <br /><br />
+                Por isso este case usa representações esquemáticas da interface e descreve as decisões
+                de produto em texto. A única exceção é a tela da Ibira com a lista de conversas vazia,
+                mais abaixo — ela não exibe nenhum dado. Se quiser ver o sistema funcionando, posso
+                apresentar em uma conversa, com autorização do instituto.
+              </p>
+            </div>
+          </div>
 
           {/* Contexto */}
           <div className={styles.section}>
@@ -260,6 +284,40 @@ export default function GestaoIbiCase() {
             </div>
           </div>
 
+          {/* Ibira */}
+          <div className={styles.section}>
+            <p className={styles.sectionLabel}>Ibira</p>
+            <h2 className={styles.sectionTitle}>Uma agente de IA<br />dentro da plataforma.</h2>
+            <p className={styles.prose}>
+              Além dos módulos de gestão, a plataforma tem a <strong>Ibira</strong> — uma agente de IA
+              especialista no contexto do instituto. Ela lê os dados que já estão no produto,
+              consolida o que está espalhado entre projetos, tarefas e avaliações, interpreta
+              resultados e produz material pronto para a coordenação e a diretoria.
+              <br /><br />
+              O ganho não é responder pergunta: é tirar da equipe o trabalho de juntar número de
+              seis módulos diferentes toda vez que alguém precisa de um panorama. A Ibira conversa
+              em linguagem natural, trabalha por conversas e grupos, e entrega o resultado no formato
+              que a reunião pede.
+            </p>
+
+            <div className={styles.shotWrap}>
+              <div className={styles.shotBar}>
+                <span className={styles.shotDot} />
+                <span className={styles.shotDot} />
+                <span className={styles.shotDot} />
+              </div>
+              <img
+                src="/work/gestao-ibi/ibira.webp"
+                alt="Tela de conversas da Ibira, a agente de IA da plataforma do IBI, sem nenhuma conversa iniciada"
+                className={styles.shotImg}
+              />
+            </div>
+            <p className={styles.coverNote}>
+              Esta é a única tela real publicada no case: a lista de conversas vazia, sem nenhum
+              dado do instituto. Serve só para mostrar como a agente aparece dentro da plataforma.
+            </p>
+          </div>
+
           {/* Aprendizados */}
           <div className={styles.section}>
             <p className={styles.sectionLabel}>Aprendizados</p>
@@ -293,6 +351,15 @@ export default function GestaoIbiCase() {
 
         </main>
       </div>
+
+      <footer className={styles.footer}>
+        <p>
+          A única imagem real da plataforma neste case é a tela de conversas vazia da Ibira, que não
+          exibe nenhum dado. Todo o resto são representações esquemáticas criadas para o portfólio:
+          os dados do Instituto Brasil-Israel — projetos, pessoas, orçamentos e avaliações —
+          permanecem confidenciais.
+        </p>
+      </footer>
 
     </div>
   )

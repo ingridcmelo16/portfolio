@@ -54,3 +54,16 @@
   border-color: #534AB7 !important;
   color: #26215C !important;
 }
+
+@media (max-width: 860px) {
+  .nav { padding: 20px 20px; }
+  .scrolled { padding: 14px 20px; }
+  .links { gap: 20px; }
+  .links a { font-size: 12px; }
+  .cta { padding: 7px 16px; }
+}
+
+@media (max-width: 480px) {
+  .links { gap: 14px; }
+  .links a:not(.cta) { display: none; }
+}

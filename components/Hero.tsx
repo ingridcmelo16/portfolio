@@ -181,7 +181,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 1.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              Na Plannera, sou a designer responsável por toda a experiência dos usuários em quatro produtos B2B — usados por empresas como Coca-Cola, Hortifruti e Lindt — com IA integrada em todo o processo.
+              Na Plannera, sou a designer responsável por toda a experiência dos usuários em quatro produtos B2B e na Plataforma que os reúne — usados por empresas como Coca-Cola, Hortifruti e Lindt — com IA integrada em todo o processo.
             </motion.p>
           </div>
 
@@ -226,7 +226,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 1.65, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className={styles.visualSmLabel}>Clientes</p>
-              <p className={styles.visualSmNum}>25+</p>
+              <p className={styles.visualSmNum}>40+</p>
               <p className={styles.visualSmSub}>empresas atendidas</p>
             </motion.div>
           </div>

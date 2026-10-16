@@ -241,3 +241,22 @@
 }
 
 .itemThumb:hover .thumbLink { opacity: 1; }
+
+@media (max-width: 1024px) {
+  .section { padding: 80px 24px 96px; }
+  .item {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 0;
+  }
+  .itemNum { display: none; }
+  .itemThumb { height: 200px; }
+}
+
+@media (max-width: 560px) {
+  .section { padding: 72px 20px 80px; }
+  .header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .item { padding: 32px 0; }
+  .itemThumb { height: 170px; }
+  .thumbMobile { transform: scale(0.85); }
+}

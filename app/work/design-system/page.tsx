@@ -20,7 +20,7 @@ export default function DesignSystemCase() {
         <h1 className={styles.heroTitle}>Plann<br />Design System</h1>
         <p className={styles.heroSub}>
           Criação do sistema de design que unificou a experiência visual e interativa
-          de quatro produtos B2B — do zero à adoção em toda a plataforma.
+          de cinco produtos — do zero à adoção em toda a plataforma.
         </p>
 
         <div className={styles.heroCover}>
@@ -38,6 +38,25 @@ export default function DesignSystemCase() {
               </defs>
             </svg>
             <p className={styles.coverTagline}>Design System</p>
+          </div>
+        </div>
+
+        <div className={styles.stats}>
+          <div className={styles.stat}>
+            <span className={styles.statNum}>96%</span>
+            <span className={styles.statLabel}>da interface do S&OP vem do DS</span>
+          </div>
+          <div className={styles.stat}>
+            <span className={styles.statNum}>65</span>
+            <span className={styles.statLabel}>componentes no catálogo</span>
+          </div>
+          <div className={styles.stat}>
+            <span className={styles.statNum}>3</span>
+            <span className={styles.statLabel}>produtos auditados</span>
+          </div>
+          <div className={styles.stat}>
+            <span className={styles.statNum}>17</span>
+            <span className={styles.statLabel}>projetos consumindo o pacote</span>
           </div>
         </div>
       </section>
@@ -72,7 +91,8 @@ export default function DesignSystemCase() {
               já existiam inconsistências: botões com estilos diferentes entre telas, tipografias variando
               sem critério, componentes recriados do zero a cada sprint.
               <br /><br />
-              Conforme novos produtos foram nascendo — <strong>S&OE, Abast e produtos internos</strong> —
+              Conforme novos produtos foram nascendo — <strong>S&OE, Abast, Inteligência de Mercado,
+              a Plataforma e produtos internos</strong> —
               o problema foi escalando. Cada novo produto herdava as inconsistências do anterior e adicionava
               as suas próprias. O retrabalho multiplicou, a manutenção ficou inviável e a experiência
               do usuário que transitava entre os produtos começou a se fragmentar visivelmente.
@@ -111,6 +131,164 @@ export default function DesignSystemCase() {
           </div>
 
           <div className={styles.section}>
+            <p className={styles.sectionLabel}>Antes</p>
+            <h2 className={styles.sectionTitle}>Duas telas, o mesmo<br />componente, nada igual.</h2>
+            <p className={styles.prose}>
+              As duas telas abaixo são de produtos diferentes da plataforma, antes do design system.
+              São a mesma coisa funcionalmente — um gráfico, uma barra de ações e uma tabela paginada —
+              e quase nada entre elas se repete.
+            </p>
+
+            <div className={styles.shots}>
+              <figure className={styles.shot}>
+                <a className={styles.shotFrame} href="/work/ds/ds-antes-1.webp" target="_blank" rel="noopener noreferrer">
+                  <img loading="lazy" decoding="async"
+                    src="/work/ds/ds-antes-1.webp"
+                    alt="Tela antiga de projeção de abastecimento, antes do design system"
+                    className={styles.shotImg}
+                  />
+                  <span className={styles.hiBox} style={{ left: "94.3%", top: "45.5%", width: "5.6%", height: "4.2%" }} />
+                  <span className={styles.hiNum} style={{ left: "97.1%", top: "43.6%" }}>1</span>
+                  <span className={styles.hiBox} style={{ left: "3.2%", top: "87.5%", width: "14.8%", height: "2.8%" }} />
+                  <span className={styles.hiNum} style={{ left: "19.5%", top: "88.9%" }}>2</span>
+                  <span className={styles.hiBox} style={{ left: "14.2%", top: "45.5%", width: "12.9%", height: "4.2%" }} />
+                  <span className={styles.hiNum} style={{ left: "20.6%", top: "43.6%" }}>3</span>
+                  <span className={styles.hiBox} style={{ left: "3%", top: "51.4%", width: "96.7%", height: "3.1%" }} />
+                  <span className={styles.hiNum} style={{ left: "98.7%", top: "52.9%" }}>4</span>
+                </a>
+                <figcaption className={styles.shotCap}>Produto A — antes do DS</figcaption>
+              </figure>
+              <figure className={styles.shot}>
+                <a className={styles.shotFrame} href="/work/ds/ds-antes-2.webp" target="_blank" rel="noopener noreferrer">
+                  <img loading="lazy" decoding="async"
+                    src="/work/ds/ds-antes-2.webp"
+                    alt="Tela antiga de projeção de estoques, antes do design system"
+                    className={styles.shotImg}
+                  />
+                  <span className={styles.hiBox} style={{ left: "78.5%", top: "44%", width: "9.3%", height: "5.5%" }} />
+                  <span className={styles.hiNum} style={{ left: "83.2%", top: "42.2%" }}>1</span>
+                  <span className={styles.hiBox} style={{ left: "10.4%", top: "92.5%", width: "28.4%", height: "4.1%" }} />
+                  <span className={styles.hiNum} style={{ left: "40.6%", top: "94.5%" }}>2</span>
+                  <span className={styles.hiBox} style={{ left: "91.2%", top: "44%", width: "7%", height: "5.5%" }} />
+                  <span className={styles.hiNum} style={{ left: "94.7%", top: "42.2%" }}>3</span>
+                  <span className={styles.hiBox} style={{ left: "3%", top: "50.9%", width: "96.7%", height: "4.6%" }} />
+                  <span className={styles.hiNum} style={{ left: "98.7%", top: "53.1%" }}>4</span>
+                </a>
+                <figcaption className={styles.shotCap}>Produto B — antes do DS</figcaption>
+              </figure>
+            </div>
+
+            <div className={styles.diffs}>
+              <div className={styles.diff}>
+                <p className={styles.diffTitle}><span className={styles.diffNum}>1</span>Ícones</p>
+                <p className={styles.diffText}>
+                  Duas famílias diferentes convivendo: outline fino de um lado, preenchido e mais
+                  pesado do outro. O mesmo “exportar” não parecia a mesma ação.
+                </p>
+              </div>
+              <div className={styles.diff}>
+                <p className={styles.diffTitle}><span className={styles.diffNum}>2</span>Paginação</p>
+                <p className={styles.diffText}>
+                  Em um produto, números quadrados colados à esquerda. No outro, pílulas com
+                  reticências e outro espaçamento. Mesmo controle, dois comportamentos visuais.
+                </p>
+              </div>
+              <div className={styles.diff}>
+                <p className={styles.diffTitle}><span className={styles.diffNum}>3</span>Botões</p>
+                <p className={styles.diffText}>
+                  Altura, raio de borda, caixa do texto e cor de ação divergiam. Não havia regra de
+                  qual botão é primário numa tela com várias ações.
+                </p>
+              </div>
+              <div className={styles.diff}>
+                <p className={styles.diffTitle}><span className={styles.diffNum}>4</span>Tabela</p>
+                <p className={styles.diffText}>
+                  Densidade de linha, tratamento do cabeçalho, alinhamento numérico e barra de
+                  rolagem resolvidos de formas distintas — na tela mais usada de ambos os produtos.
+                </p>
+              </div>
+            </div>
+
+            <p className={styles.prose} style={{ marginTop: 28 }}>
+              Isoladamente cada diferença é pequena. Somadas, são o que fazia o usuário sentir que
+              trocou de sistema ao mudar de módulo — e o que obrigava o time a redecidir as mesmas
+              coisas a cada sprint.
+            </p>
+            <p className={styles.imgNote}>
+              Telas de ambiente real, com dados e identificação de cliente borrados.
+            </p>
+          </div>
+
+          <div className={styles.section}>
+            <p className={styles.sectionLabel}>Depois</p>
+            <h2 className={styles.sectionTitle}>Duas telas, o mesmo<br />componente, igual.</h2>
+            <p className={styles.prose}>
+              As duas telas abaixo também são de produtos diferentes — e também são a mesma coisa:
+              um cadastro em tabela. A diferença é que agora elas saem da mesma biblioteca. Ícone,
+              botão, paginação, cabeçalho, densidade de linha e barra de ações vêm do pacote, não
+              de uma decisão tomada de novo naquele sprint.
+            </p>
+
+            <div className={styles.beforeGrid}>
+              <figure className={styles.beforeItem}>
+                <a href="/work/ds/ds-depois-1.webp" target="_blank" rel="noopener noreferrer">
+                <img loading="lazy" decoding="async"
+                  src="/work/ds/ds-depois-1.webp"
+                  alt="Tela de cadastro de produto depois do design system"
+                  className={styles.beforeImg}
+                />
+                </a>
+                <figcaption className={styles.beforeCap}>Produto A — depois do DS</figcaption>
+              </figure>
+              <figure className={styles.beforeItem}>
+                <a href="/work/ds/ds-depois-2.webp" target="_blank" rel="noopener noreferrer">
+                <img loading="lazy" decoding="async"
+                  src="/work/ds/ds-depois-2.webp"
+                  alt="Tela de cadastro de item em outro produto, depois do design system"
+                  className={styles.beforeImg}
+                />
+                </a>
+                <figcaption className={styles.beforeCap}>Produto B — depois do DS</figcaption>
+              </figure>
+            </div>
+
+            <div className={styles.diffs}>
+              <div className={`${styles.diff} ${styles.diffOk}`}>
+                <p className={styles.diffTitle}>Ícones</p>
+                <p className={styles.diffText}>
+                  Uma família só, com o mesmo peso e a mesma caixa. Filtrar, exportar e excluir
+                  são reconhecíveis entre produtos sem precisar ler o tooltip.
+                </p>
+              </div>
+              <div className={`${styles.diff} ${styles.diffOk}`}>
+                <p className={styles.diffTitle}>Paginação</p>
+                <p className={styles.diffText}>
+                  Mesmo componente nos dois: seletor de itens por página, contagem de registros
+                  e navegação com o mesmo espaçamento e o mesmo estado ativo.
+                </p>
+              </div>
+              <div className={`${styles.diff} ${styles.diffOk}`}>
+                <p className={styles.diffTitle}>Botões</p>
+                <p className={styles.diffText}>
+                  Barra de ações com altura, raio e hierarquia definidos pelo sistema — e regra
+                  de qual ação é destrutiva, qual é primária e onde cada uma fica.
+                </p>
+              </div>
+              <div className={`${styles.diff} ${styles.diffOk}`}>
+                <p className={styles.diffTitle}>Tabela</p>
+                <p className={styles.diffText}>
+                  Cabeçalho, ordenação, seleção por checkbox, zebra e alinhamento numérico iguais.
+                  Quem sabe usar a tabela de um produto sabe usar a do outro.
+                </p>
+              </div>
+            </div>
+
+            <p className={styles.imgNote}>
+              Instância de demonstração — todos os SKUs, descrições e valores das telas são fictícios.
+            </p>
+          </div>
+
+          <div className={styles.section}>
             <p className={styles.sectionLabel}>Processo</p>
             <h2 className={styles.sectionTitle}>Como fui do diagnóstico ao sistema.</h2>
             <p className={styles.prose}>
@@ -124,7 +302,7 @@ export default function DesignSystemCase() {
             </p>
 
             <div className={styles.imgWrap}>
-              <img src="/work/ds/colors.png" alt="Foundations — Colors do Plann DS" className={styles.caseImg} />
+              <img loading="lazy" decoding="async" src="/work/ds/colors.webp" alt="Foundations — Colors do Plann DS" className={styles.caseImg} />
               <div className={styles.imgOverlay} />
             </div>
           </div>
@@ -134,10 +312,16 @@ export default function DesignSystemCase() {
             <h2 className={styles.sectionTitle}>O que foi construído.</h2>
             <p className={styles.prose}>
               O Plann DS é composto por três camadas: <strong>tokens, componentes e documentação</strong>.
-              Toda a especificação foi criada e documentada no <strong>Figma</strong> — anatomia,
-              estados, variantes e guidelines de uso.
+              A especificação começou no <strong>Figma</strong> — anatomia, estados, variantes e
+              guidelines de uso. Mas documentação que só vive no Figma só serve a quem abre o Figma,
+              e o sistema precisava chegar a quem escreve código.
               <br /><br />
-              Além da documentação visual, entreguei o sistema em código: os componentes foram
+              Por isso a documentação virou <strong>arquivos .md no próprio repositório</strong>:
+              cada componente com sua anatomia, estados e regras de uso em texto, versionado junto
+              com o código. Isso abriu o DS para qualquer pessoa da empresa usar em produtos
+              internos — inclusive quem não é designer e não tem acesso ao Figma.
+              <br /><br />
+              Além da documentação, entreguei o sistema em código: os componentes foram
               implementados em <strong>Blazor</strong> — a tecnologia usada pelos produtos da Plannera —
               e publicados como um <strong>pacote compartilhável</strong>, consumido diretamente pelos
               squads de desenvolvimento.
@@ -149,12 +333,12 @@ export default function DesignSystemCase() {
 
 
             <div className={styles.imgWrap}>
-              <img src="/work/ds/button.png" alt="Componente Button — Plann DS" className={styles.caseImg} />
+              <img loading="lazy" decoding="async" src="/work/ds/button.webp" alt="Componente Button — Plann DS" className={styles.caseImg} />
               <div className={styles.imgOverlay} />
             </div>
 
             <div className={styles.imgWrap}>
-              <img src="/work/ds/input.png" alt="Componente Text Input — Plann DS" className={styles.caseImg} />
+              <img loading="lazy" decoding="async" src="/work/ds/input.webp" alt="Componente Text Input — Plann DS" className={styles.caseImg} />
               <div className={styles.imgOverlay} />
             </div>
 
@@ -162,17 +346,110 @@ export default function DesignSystemCase() {
 
           <div className={styles.section}>
             <p className={styles.sectionLabel}>Resultados</p>
-            <h2 className={styles.sectionTitle}>O que mudou depois.</h2>
+            <h2 className={styles.sectionTitle}>Quanto da interface<br />é design system hoje.</h2>
             <p className={styles.prose}>
-              Com o DS em produção, o time passou a ter uma <strong>fonte de verdade única</strong>
-              — mais de <strong>15 componentes unificados</strong>, tokens exportáveis e decisões documentadas
-              acessíveis a qualquer dev ou designer da equipe.
+              Em vez de afirmar que o sistema “foi adotado”, auditei os produtos e medi. Adoção
+              não é um número só: três medidas diferentes respondem perguntas diferentes, e
+              confundir uma com a outra é como se engana o leitor de um case.
+            </p>
+
+            <div className={styles.measures}>
+              <div className={styles.measure}>
+                <p className={styles.measureName}>Por componente distinto</p>
+                <p className={styles.measureText}>
+                  Dos <em>tipos</em> de componente que a interface usa, quantos são do DS.
+                  No S&OP: 56 dos 71 tipos são do sistema, 15 são próprios do produto.
+                  Mostra o quanto o vocabulário visual é compartilhado.
+                </p>
+              </div>
+              <div className={styles.measure}>
+                <p className={styles.measureName}>Por instância renderizada</p>
+                <p className={styles.measureText}>
+                  Contando cada vez que um componente aparece na tela. No S&OP: 696 dos 722 usos
+                  vêm do sistema, 26 de componentes próprios. Mostra o que o usuário de fato vê.
+                </p>
+              </div>
+              <div className={styles.measure}>
+                <p className={styles.measureName}>Catálogo em uso</p>
+                <p className={styles.measureText}>
+                  Dos 65 componentes que o DS oferece, quantos aquele produto consome. Produto
+                  pequeno não precisa de tudo — aqui, número baixo não é problema. Os três estão
+                  calculados sobre o mesmo catálogo de 65.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.adoption}>
+              <div className={styles.adoptionHead}>
+                <span>Produto</span>
+                <span>Componente distinto</span>
+                <span>Instância renderizada</span>
+                <span>Catálogo em uso</span>
+              </div>
+              <div className={styles.adoptionRow}>
+                <span className={styles.adoptionName}>S&OP</span>
+                <span className={styles.adoptionCell} data-label="Componente distinto">
+                  78,9% <em>56 de 71</em>
+                </span>
+                <span className={styles.adoptionCell} data-label="Instância renderizada">
+                  <strong>96,4%</strong> <em>696 de 722</em>
+                </span>
+                <span className={styles.adoptionCell} data-label="Catálogo em uso">
+                  86,2% <em>56 de 65</em>
+                </span>
+              </div>
+              <div className={styles.adoptionRow}>
+                <span className={styles.adoptionName}>Inteligência de Mercado</span>
+                <span className={styles.adoptionCell} data-label="Componente distinto">
+                  77,5% <em>31 de 40</em>
+                </span>
+                <span className={styles.adoptionCell} data-label="Instância renderizada">
+                  <strong>97,0%</strong> <em>319 de 329</em>
+                </span>
+                <span className={styles.adoptionCell} data-label="Catálogo em uso">
+                  47,7% <em>31 de 65</em>
+                </span>
+              </div>
+              <div className={styles.adoptionRow}>
+                <span className={styles.adoptionName}>S&OE</span>
+                <span className={styles.adoptionCell} data-label="Componente distinto">
+                  25,4% <em>44 de 173</em>
+                </span>
+                <span className={styles.adoptionCell} data-label="Instância renderizada">
+                  <strong>56,3%</strong> <em>822 de 1.461</em>
+                </span>
+                <span className={styles.adoptionCell} data-label="Catálogo em uso">
+                  67,7% <em>44 de 65</em>
+                </span>
+              </div>
+            </div>
+
+            <p className={styles.prose} style={{ marginTop: 28 }}>
+              Repare na diferença entre as duas primeiras colunas do S&OP: 78,9% dos tipos, mas
+              96,4% do que é renderizado. Os componentes próprios que sobraram são casos pontuais,
+              usados uma ou duas vezes; o que se repete na tela — tabela, botão, input, filtro —
+              é tudo do sistema. É por isso que as duas medidas precisam andar juntas: sozinha,
+              a primeira subestima a adoção e a segunda a superestima.
               <br /><br />
-              O impacto em velocidade e consistência já é percebido no dia a dia, mas as métricas
-              formais — tempo de implementação antes e depois, redução de retrabalho — estão sendo
-              estruturadas agora para acompanhamento contínuo.
-              Esse é um sistema vivo: a intenção é evoluir a governança e medir o retorno à medida
-              que o DS amadurece dentro dos produtos.
+              O padrão entre produtos é explicado pelo momento de cada um, não por empenho de time.
+              O <strong>S&OP passou por uma migração de front</strong> no mesmo período — e migração
+              é a janela mais barata que existe para adotar um design system, porque a tela vai ser
+              reescrita de qualquer jeito. Em vez de ser mais um pedido no backlog, o DS virou a
+              base da reescrita, e a adoção acelerou junto — é o produto que mais consome o
+              catálogo, 56 dos 65 componentes. A <strong>Inteligência de Mercado</strong>
+              teve a condição mais fácil: nasceu depois do sistema, então nunca existiu uma base
+              anterior para competir com ele.
+              <br /><br />
+              O <strong>S&OE ainda está no caminho</strong>. Já usa dois terços do catálogo, o que
+              mostra que o sistema entrou de verdade — mas ele responde por pouco mais da metade do
+              que é renderizado, porque convive com 249 componentes próprios anteriores ao sistema,
+              129 ainda em uso. Sem uma migração que justifique reescrever tela, a substituição
+              acontece aos poucos, conforme cada área é tocada por outro motivo.
+              <br /><br />
+              Não é contradição, é a curva real de adoção. Produto novo adota por padrão, produto em
+              migração adota de uma vez, produto estável adota por substituição. Saber em qual dos
+              três cada um está é o que me diz onde o trabalho de governança ainda está — e por que
+              cobrar do S&OE o número do S&OP seria ler o dado errado.
             </p>
           </div>
 
@@ -197,7 +474,20 @@ export default function DesignSystemCase() {
               <div className={styles.learning}>
                 <span className={styles.learningNum}>03</span>
                 <p className={styles.learningText}>
-                  [Adicionar um aprendizado seu específico.]
+                  <strong>O DS destravou uma decisão de negócio, não só de design.</strong> Enquanto
+                  cada produto tinha a própria linguagem visual, juntar S&amp;OP, S&amp;OE, Abast e
+                  Inteligência de Mercado num acesso único era inviável — o cliente sentiria que
+                  trocou de empresa a cada clique. Com a base unificada, a plataforma única deixou
+                  de ser uma ambição e virou um caminho concreto.
+                </p>
+              </div>
+              <div className={styles.learning}>
+                <span className={styles.learningNum}>04</span>
+                <p className={styles.learningText}>
+                  <strong>Consistência é velocidade.</strong> O ganho que o time sente no dia a dia
+                  não é estético: tela nova deixou de começar do zero. O dev instala o pacote, compõe
+                  com componentes prontos e não para para decidir espaçamento, estado de erro ou cor
+                  de botão — decisões que antes eram refeitas em cada sprint, em cada produto.
                 </p>
               </div>
             </div>

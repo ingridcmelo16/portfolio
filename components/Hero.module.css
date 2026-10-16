@@ -485,3 +485,18 @@
   text-transform: uppercase;
   color: rgba(83, 74, 183, 0.4);
 }
+
+@media (max-width: 1024px) {
+  .hero { padding: 100px 24px 72px; min-height: auto; }
+  .grid { grid-template-columns: 1fr; gap: 48px; }
+  .sub { max-width: none; }
+}
+
+@media (max-width: 560px) {
+  .hero { padding: 88px 20px 56px; }
+  .title { font-size: clamp(40px, 11vw, 56px); letter-spacing: -1.5px; }
+  .sub { font-size: 16px; }
+  .actions { flex-wrap: wrap; gap: 16px; }
+  .btnPrimary { padding: 13px 24px; }
+  .visualCard { padding: 20px; }
+}

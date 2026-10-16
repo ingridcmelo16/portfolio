@@ -19,16 +19,18 @@ export default function OhanaCase() {
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
-          <span className={`${styles.pill} ${styles.pillGreen}`}>UX + Dev</span>
-          <span className={styles.pill}>2025</span>
+          <span className={`${styles.pill} ${styles.pillGreen}`}>Projeto experimental</span>
+          <span className={styles.pill}>2026</span>
+          <span className={styles.pill}>UX + Dev</span>
           <span className={styles.pill}>Claude Code · Vercel</span>
-          <span className={styles.pill}>Small Business</span>
         </div>
 
         <h1 className={styles.heroTitle}>Ohana Pets</h1>
         <p className={styles.heroSub}>
-          Pet care em início de operação, só com Instagram — sem site, sem descoberta orgânica.
-          Do brief ao deploy com boas práticas de UX e Claude Code.
+          Um amigo dono de um pet care, uma empresa real rodando só pelo Instagram e nenhum
+          cliente, prazo ou stakeholder no caminho. Sem ninguém pedindo nada, dava para fazer a
+          pergunta que não cabe no trabalho: quanto de produto uma designer entrega sozinha,
+          do brief ao site no ar?
         </p>
 
         {/* Browser mockup */}
@@ -47,11 +49,12 @@ export default function OhanaCase() {
           </div>
           <div className={styles.browserScreen}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/work/ohana/home.png" alt="Site Ohana Pets" className={styles.browserImg} />
+            <img src="/work/ohana/home.webp" alt="Site Ohana Pets" className={styles.browserImg} />
           </div>
         </div>
 
         {/* Stats */}
+        <p className={styles.statsLabel}>O ponto de partida</p>
         <div className={styles.stats}>
           <div className={styles.stat}>
             <span className={styles.statNum}>1</span>
@@ -105,12 +108,23 @@ export default function OhanaCase() {
           {/* Contexto */}
           <div className={styles.section}>
             <p className={styles.sectionLabel}>Contexto</p>
-            <h2 className={styles.sectionTitle}>Empresa real,<br />presença zero.</h2>
+            <h2 className={styles.sectionTitle}>Ninguém<br />tinha pedido.</h2>
             <p className={styles.prose}>
-              A Ohana Pets já operava desde 2022 — mais de 30 pets atendidos, avaliação 5 estrelas
-              e clientes fiéis. Mas toda captação dependia do Instagram. Sem site, a empresa não
-              aparecia no Google, não passava confiança pra novos clientes e não tinha onde centralizar
-              serviços e preços. O boca a boca funcionava, mas não escalava.
+              A Ohana Pets é de um amigo meu. Opera desde 2022 — mais de 30 pets atendidos, avaliação
+              5 estrelas, clientes fiéis — e toda a captação passava pelo Instagram. Sem site, a
+              empresa não aparecia no Google e não tinha onde centralizar serviços e preços. O boca a
+              boca funcionava, mas não escalava.
+              <br /><br />
+              Não houve contratação, briefing formal nem prazo. E é justamente isso que torna o
+              projeto interessante para mim: sem cliente para aprovar e sem escopo para proteger,
+              o único critério que sobra é <em>isso resolve o problema dele?</em> Virou o lugar onde
+              eu testei trabalhar como time de um — pesquisa, decisão, escrita, código e deploy —
+              antes de levar esse modo de trabalho para dentro do produto.
+              <br /><br />
+              Vale dizer com todas as letras: <strong>foi um experimento, e eu não acompanhei o
+              depois</strong>. Entreguei o site no ar e não sei se ele segue operando, se virou o
+              canal de contato do negócio ou se o meu amigo mudou de ideia. Este case é sobre as
+              decisões que tomei, não sobre resultado de negócio.
             </p>
           </div>
 
@@ -118,77 +132,79 @@ export default function OhanaCase() {
           <div className={styles.section}>
             <p className={styles.sectionLabel}>Problema</p>
             <h2 className={styles.sectionTitle}>Invisível para<br />quem ainda não te conhece.</h2>
+            <p className={styles.prose}>
+              O boca a boca resolve o cliente que já ouviu falar da Ohana. Para todo o resto,
+              a empresa simplesmente não existia — e os dois motivos eram bem concretos.
+            </p>
             <div className={styles.problemGrid}>
               <div className={styles.problemCard}>
                 <div className={styles.problemIcon}>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5.25" stroke="currentColor" strokeWidth="1.25"/><path d="M11 11l3 3" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"/><path d="M7 4v3l2 2" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5.25" stroke="currentColor" strokeWidth="1.25"/><path d="M11 11l3 3" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"/></svg>
                 </div>
-                <p className={styles.problemTitle}>Sem descoberta orgânica</p>
-                <p className={styles.problemText}>Buscas por "dog walker Rio" ou "hospedagem pet" nunca retornavam a Ohana. Instagram não indexa para Google.</p>
+                <p className={styles.problemTitle}>Quem procura não acha</p>
+                <p className={styles.problemText}>
+                  Instagram não é indexado pelo Google. Buscas por “dog walker Rio” ou “hospedagem
+                  pet” nunca chegavam à Ohana — e é assim que procura quem ainda não conhece ninguém
+                  do ramo.
+                </p>
               </div>
               <div className={styles.problemCard}>
                 <div className={styles.problemIcon}>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.25"/><path d="M5 6h6M5 8.5h4" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"/></svg>
                 </div>
-                <p className={styles.problemTitle}>Fricção na conversão</p>
-                <p className={styles.problemText}>Novos clientes precisavam vasculhar o feed para entender preços — péssimo contexto para uma decisão que envolve confiança.</p>
-              </div>
-              <div className={styles.problemCard}>
-                <div className={styles.problemIcon}>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2zM8 5v3l3 1.5" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </div>
-                <p className={styles.problemTitle}>Credibilidade limitada</p>
-                <p className={styles.problemText}>Sem site, a ausência de presença web passava insegurança para quem não chegava por indicação.</p>
-              </div>
-              <div className={styles.problemCard}>
-                <div className={styles.problemIcon}>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 3.5 9 7.5M3 12.5l4-4M3 3.5l4 4M13 12.5 9 8.5" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round"/></svg>
-                </div>
-                <p className={styles.problemTitle}>Contato não estruturado</p>
-                <p className={styles.problemText}>DM no Instagram: lento, informal e sem forma de captar dados do pet antes do primeiro atendimento.</p>
+                <p className={styles.problemTitle}>Quem acha não decide</p>
+                <p className={styles.problemText}>
+                  Serviço e preço estavam espalhados pelo feed. Para saber quanto custa, a pessoa
+                  tinha que mandar DM — pedir informação básica a um estranho antes de confiar
+                  o próprio cachorro a ele.
+                </p>
               </div>
             </div>
           </div>
 
           {/* Solução */}
           <div className={styles.section}>
-            <p className={styles.sectionLabel}>Solução</p>
-            <h2 className={styles.sectionTitle}>UX orientada<br />a objetivo de negócio.</h2>
+            <p className={styles.sectionLabel}>Decisões</p>
+            <h2 className={styles.sectionTitle}>Duas escolhas<br />que definiram o site.</h2>
             <p className={styles.prose}>
-              O site foi desenhado para resolver problemas específicos — não só "ter uma presença web".
-              Cada decisão de UX partiu de uma pergunta: <em>isso ajuda alguém a confiar e contratar?</em>
+              O site é de uma página só. Com esse tamanho, quase tudo é consequência de duas
+              decisões — e as duas tinham um caminho mais confortável que eu não segui.
             </p>
 
             <div className={styles.solutionList}>
               <div className={styles.solutionItem}>
                 <span className={styles.solutionNum}>01</span>
                 <div>
-                  <p className={styles.solutionTitle}>Hierarquia de confiança</p>
-                  <p className={styles.solutionText}>Proposta de valor no hero → depoimentos reais → fotos dos pets. O usuário entende o serviço e vê prova social antes de qualquer CTA.</p>
+                  <p className={styles.solutionTitle}>Preço na página, não sob consulta</p>
+                  <p className={styles.solutionText}>
+                    “Sob consulta” é o padrão do setor e é mais seguro para quem vende: não assusta
+                    e abre conversa. Mas o problema da Ohana não era negociar melhor — era ser
+                    descartada antes da conversa. Cada serviço ganhou preço inicial e o que está
+                    incluso. Perde-se margem de negociação; ganha-se a pessoa que não ia mandar
+                    DM só para perguntar quanto custa.
+                  </p>
                 </div>
               </div>
               <div className={styles.solutionItem}>
                 <span className={styles.solutionNum}>02</span>
                 <div>
-                  <p className={styles.solutionTitle}>Serviços com contexto</p>
-                  <p className={styles.solutionText}>Cada serviço tem descrição, preço inicial e diferenciais inclusos — elimina a fricção de perguntar o básico antes de entrar em contato.</p>
-                </div>
-              </div>
-              <div className={styles.solutionItem}>
-                <span className={styles.solutionNum}>03</span>
-                <div>
-                  <p className={styles.solutionTitle}>CTA direto para WhatsApp</p>
-                  <p className={styles.solutionText}>Canal de conversão alinhado com como a empreendedora já trabalhava — sem fricção de formulário, sem mudar o processo existente.</p>
-                </div>
-              </div>
-              <div className={styles.solutionItem}>
-                <span className={styles.solutionNum}>04</span>
-                <div>
-                  <p className={styles.solutionTitle}>Diferenciais visíveis</p>
-                  <p className={styles.solutionText}>Rastreamento ao vivo e fotos diárias pelo WhatsApp — features que existiam mas não eram comunicadas com clareza no Instagram.</p>
+                  <p className={styles.solutionTitle}>WhatsApp como conversão, não formulário</p>
+                  <p className={styles.solutionText}>
+                    Formulário me daria dados estruturados do pet e um funil bonito de medir. Mas
+                    ele exige que alguém abra um e-mail, responda e mantenha o hábito — e o dono
+                    já atendia tudo pelo WhatsApp, bem. Desenhar um processo novo para uma operação
+                    de uma pessoa é desenhar um processo que morre na segunda semana. O CTA leva
+                    direto para a conversa que já existia.
+                  </p>
                 </div>
               </div>
             </div>
+
+            <p className={styles.prose} style={{ marginTop: 28 }}>
+              O resto seguiu dessas duas: proposta de valor e prova social antes de qualquer CTA,
+              e os diferenciais que ele já oferecia — rastreamento ao vivo e foto diária do pet —
+              ditos na página, em vez de aparecerem só quando o cliente já estava dentro.
+            </p>
           </div>
 
           {/* Screenshots do site */}
@@ -198,17 +214,17 @@ export default function OhanaCase() {
             <div className={styles.screenshotGrid}>
               <div className={styles.screenshotWrap}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/work/ohana/home.png" alt="Home do site" className={styles.screenshotImg} />
+                <img loading="lazy" decoding="async" src="/work/ohana/home.webp" alt="Home do site" className={styles.screenshotImg} />
                 <p className={styles.screenshotCaption}>Homepage completa</p>
               </div>
               <div className={styles.screenshotWrap}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/work/ohana/preços.png" alt="Preços e serviços" className={styles.screenshotImg} />
+                <img loading="lazy" decoding="async" src="/work/ohana/precos.webp" alt="Preços e serviços" className={styles.screenshotImg} />
                 <p className={styles.screenshotCaption}>Serviços com preços e diferenciais</p>
               </div>
               <div className={styles.screenshotWrap}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/work/ohana/hero 2.png" alt="Hero do site" className={styles.screenshotImg} />
+                <img loading="lazy" decoding="async" src="/work/ohana/hero-2.webp" alt="Hero do site" className={styles.screenshotImg} />
                 <p className={styles.screenshotCaption}>Seção hero — variação</p>
               </div>
             </div>
@@ -228,7 +244,7 @@ export default function OhanaCase() {
               <div className={styles.timelineItem}>
                 <div className={styles.timelineDot} />
                 <div className={styles.timelineBody}>
-                  <p className={styles.timelineTitle}>Brief com a empreendedora</p>
+                  <p className={styles.timelineTitle}>Conversa com o dono</p>
                   <p className={styles.timelineText}>Entender serviços, diferenciais, perfil de cliente e como o contato acontecia. Isso definiu a arquitetura da informação e a ordem das seções.</p>
                 </div>
               </div>
@@ -256,33 +272,86 @@ export default function OhanaCase() {
             </div>
           </div>
 
+          {/* Resultado */}
+          <div className={styles.section}>
+            <p className={styles.sectionLabel}>Resultado</p>
+            <h2 className={styles.sectionTitle}>O que dá pra afirmar<br />— e o que não dá.</h2>
+            <p className={styles.prose}>
+              Projeto sem cliente não tem relatório de resultado, e não vou inventar um.
+              Não acompanhei o site depois da entrega: não sei quanta gente chegou por ele, se o
+              negócio continua usando ou se ele ainda está no ar hoje. O que eu posso afirmar é o
+              que foi entregue.
+            </p>
+            <div className={styles.outcomes}>
+              <div className={styles.outcome}>
+                <span className={styles.outcomeMark}>✓</span>
+                <p className={styles.outcomeText}>
+                  <strong>Saiu do Instagram.</strong> Endereço próprio, conteúdo indexável e um
+                  link que cabe em cartão, bio e indicação.
+                </p>
+              </div>
+              <div className={styles.outcome}>
+                <span className={styles.outcomeMark}>✓</span>
+                <p className={styles.outcomeText}>
+                  <strong>Preço respondido antes da pergunta.</strong> Quem chega sabe o que custa
+                  e o que está incluso sem falar com ninguém.
+                </p>
+              </div>
+              <div className={styles.outcome}>
+                <span className={styles.outcomeMark}>✓</span>
+                <p className={styles.outcomeText}>
+                  <strong>Entregue sem equipe.</strong> Conversa, estrutura, texto, código e deploy
+                  por uma pessoa, em um ciclo — que era a pergunta do experimento.
+                </p>
+              </div>
+              <div className={styles.outcome}>
+                <span className={styles.outcomeMarkOpen}>—</span>
+                <p className={styles.outcomeText}>
+                  <strong>O que eu não sei.</strong> Se o site está operando hoje, quanto do
+                  contato passou a vir dele e qual o volume de busca orgânica. Entreguei e não
+                  acompanhei — prefiro dizer isso a chutar número.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Aprendizados */}
           <div className={styles.section}>
             <p className={styles.sectionLabel}>Aprendizados</p>
-            <h2 className={styles.sectionTitle}>UX não é só<br />para grandes produtos.</h2>
+            <h2 className={styles.sectionTitle}>O que eu levei<br />daqui pro trabalho.</h2>
             <div className={styles.learnings}>
               <div className={styles.learning}>
                 <span className={styles.learningNum}>01</span>
                 <p className={styles.learningText}>
-                  <strong>O problema de negócio define a UX.</strong> Para a Ohana, o problema não era
-                  "fazer uma interface bonita" — era invisibilidade e falta de credibilidade. Cada decisão
-                  partiu daí.
+                  <strong>Sem cliente, o único critério é o problema.</strong> Não havia quem
+                  aprovasse, então não dava para me esconder atrás de “foi o que pediram”. Toda
+                  escolha precisava se justificar sozinha — e isso é um padrão que passei a cobrar
+                  de mim também onde existe cliente.
                 </p>
               </div>
               <div className={styles.learning}>
                 <span className={styles.learningNum}>02</span>
                 <p className={styles.learningText}>
-                  <strong>Claude Code como parceiro de entrega.</strong> Com brief e estrutura definidos,
-                  o Claude Code acelerou a implementação sem abrir mão de qualidade — UX writing, boas
-                  práticas e código limpo num único ciclo.
+                  <strong>Desenhar para quem vai operar, não para quem vai ver.</strong> O
+                  formulário era a decisão mais defensável num portfólio e a pior para uma operação
+                  de uma pessoa. Negócio pequeno não tem folga para absorver processo novo, e isso
+                  vale igual para squad pequeno.
                 </p>
               </div>
               <div className={styles.learning}>
                 <span className={styles.learningNum}>03</span>
                 <p className={styles.learningText}>
-                  <strong>Pequenos negócios têm problemas reais de UX.</strong> A Ohana não precisava
-                  de design system ou pesquisa com 20 usuários — precisava de clareza, confiança e
-                  um CTA que funcionasse. Isso é UX também.
+                  <strong>É no negócio pequeno que a UX aparece mais rápido.</strong> Num produto
+                  grande, uma decisão ruim se dilui em métrica. Aqui, preço escondido é o cliente
+                  inteiro que não volta — o efeito de cada escolha fica visível no tamanho real.
+                </p>
+              </div>
+              <div className={styles.learning}>
+                <span className={styles.learningNum}>04</span>
+                <p className={styles.learningText}>
+                  <strong>Projeto sem ninguém pedindo é onde se testa o modo de trabalho.</strong>
+                  Fazer sozinha o ciclo inteiro — conversa, estrutura, texto, código e deploy —
+                  deixou de ser teoria aqui antes de virar como eu trabalho nos produtos da Plannera.
                 </p>
               </div>
             </div>

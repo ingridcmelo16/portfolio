@@ -101,3 +101,15 @@
   border-radius: 99px;
   color: rgba(83, 74, 183, 0.5);
 }
+
+@media (max-width: 1024px) {
+  .section { padding: 80px 24px 96px; }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .header { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+
+@media (max-width: 560px) {
+  .section { padding: 72px 20px 80px; }
+  .steps { grid-template-columns: 1fr; }
+  .step { padding: 28px 22px 32px; }
+}

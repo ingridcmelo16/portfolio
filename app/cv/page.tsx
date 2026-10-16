@@ -8,9 +8,14 @@ export default function CV() {
 
       <div className={styles.topBar}>
         <Link href="/" className={styles.back}>← Portfólio</Link>
-        <button className={styles.printBtn} onClick={() => typeof window !== "undefined" && window.print()}>
-          Baixar / Imprimir
-        </button>
+        <div className={styles.actions}>
+          <a className={styles.downloadBtn} href="/cv-ingrid-melo.pdf" download="Ingrid-Melo-CV.pdf">
+            Baixar PDF
+          </a>
+          <button className={styles.printBtn} onClick={() => typeof window !== "undefined" && window.print()}>
+            Imprimir
+          </button>
+        </div>
       </div>
 
       <div className={styles.layout}>
@@ -20,7 +25,11 @@ export default function CV() {
 
           <div className={styles.identity}>
             <h1 className={styles.name}>Ingrid Melo</h1>
-            <p className={styles.role}>Product Designer</p>
+            <p className={styles.role}>Product Designer &amp; AI Builder</p>
+            <p className={styles.tagline}>
+              Discovery, design, front-end no-code e IA aplicada de ponta a ponta
+              em produtos B2B de Supply Chain.
+            </p>
           </div>
 
           <div className={styles.sideSection}>
@@ -34,17 +43,17 @@ export default function CV() {
             <p className={styles.sideLabel}>Skills</p>
             {[
               "Product Design",
+              "Discovery & PRD",
+              "Priorização & roadmap",
               "UX Research",
               "Design System",
               "DesignOps",
-              "IA Aplicada ao Design",
               "Agentes de IA",
-              "Prototipação",
-              "Figma",
-              "Frontend (HTML/CSS)",
-              "Blazor",
+              "Claude Code",
+              "Prototipagem generativa",
+              "Front-end (Blazor, HTML/CSS)",
+              "Tracking de produto",
               "Supply Chain B2B",
-              "Discovery & Delivery",
             ].map(s => (
               <span key={s} className={styles.skill}>{s}</span>
             ))}
@@ -53,7 +62,7 @@ export default function CV() {
           <div className={styles.sideSection}>
             <p className={styles.sideLabel}>Idiomas</p>
             <div className={styles.lang}><span>Português</span><span className={styles.langLevel}>Nativo</span></div>
-            <div className={styles.lang}><span>Inglês</span><span className={styles.langLevel}>Intermediário</span></div>
+            <div className={styles.lang}><span>Inglês</span><span className={styles.langLevel}>Básico</span></div>
           </div>
 
           <div className={styles.sideSection}>
@@ -81,14 +90,71 @@ export default function CV() {
           <div className={styles.section}>
             <p className={styles.sectionLabel}>Sobre</p>
             <p className={styles.prose}>
-              Designer de produto especializada em B2B e Supply Chain, com 3+ anos construindo as experiências
-              S&OP e S&OE da Plannera — do zero. Conduzo o processo de UX de ponta a ponta: discovery com
-              usuários reais, síntese, prototipação e entrega próxima ao time de engenharia.
+              Product designer que constrói. Faço o caminho completo — discovery, design, front-end
+              no-code e IA — em produtos de Supply Chain, incluindo a ferramenta de S&OP mais bem
+              avaliada do mercado.
               <br /><br />
-              Aplico inteligência artificial de forma prática no fluxo de design — criação de agentes,
-              automação de tarefas e aceleração de discovery. Atuo em 3 squads simultaneamente e estruturei
-              o processo de UX na empresa.
+              Hoje conduzo a <strong>Gaia</strong>, frente de agentes de IA da Plannera, acumulando
+              design, produto e desenvolvimento. O cargo é Product Designer Pleno; o escopo deste
+              ano inclui responsabilidades de produto — priorização e roadmap — junto com Head de
+              Produto e CTO.
             </p>
+          </div>
+
+          <div className={styles.section}>
+            <p className={styles.sectionLabel}>Projetos em destaque</p>
+            <div className={styles.highlights}>
+              <div className={styles.highlight}>
+                <p className={styles.highlightTitle}>
+                  Gaia — gestora de agentes de IA <span>· Plannera</span>
+                </p>
+                <p className={styles.highlightText}>
+                  Nova frente de tecnologia da empresa. Atuo em papel híbrido — da definição e
+                  priorização ao desenho e à construção — conduzindo o produto de ponta a ponta:
+                  conversas com agentes, agendamentos e geração de artefatos.
+                </p>
+                <a href="/work/gaia" className={styles.highlightLink}>ver case →</a>
+              </div>
+              <div className={styles.highlight}>
+                <p className={styles.highlightTitle}>
+                  Tracking de produto <span>· Plannera</span>
+                </p>
+                <p className={styles.highlightText}>
+                  Implementei o tracking de todos os produtos com Claude Code — mapeamento e
+                  inclusão dos eventos direto no código, consolidação na Central de UX e
+                  acompanhamento das métricas.
+                </p>
+              </div>
+              <div className={styles.highlight}>
+                <p className={styles.highlightTitle}>
+                  Fábrica de protótipos com IA <span>· Plannera</span>
+                </p>
+                <p className={styles.highlightText}>
+                  Implantei um fluxo com Claude Code que consolida discovery, PRD e protótipo HTML
+                  interativo em até 2 dias — um único ciclo acelerado no lugar de semanas de handoff.
+                </p>
+              </div>
+              <div className={styles.highlight}>
+                <p className={styles.highlightTitle}>
+                  Inteligência de Mercado <span>· Plannera</span>
+                </p>
+                <p className={styles.highlightText}>
+                  Produto concebido e entregue em menos de 1 mês com desenvolvimento assistido por
+                  IA, em colaboração direta com PO e Head de Produto.
+                </p>
+                <a href="/work/market-intel" className={styles.highlightLink}>ver case →</a>
+              </div>
+              <div className={styles.highlight}>
+                <p className={styles.highlightTitle}>
+                  Plann Design System <span>· Plannera</span>
+                </p>
+                <p className={styles.highlightText}>
+                  Criação do design system da empresa do design ao front-end em Blazor, garantindo
+                  paridade entre biblioteca e produção em todos os squads.
+                </p>
+                <a href="/work/design-system" className={styles.highlightLink}>ver case →</a>
+              </div>
+            </div>
           </div>
 
           <div className={styles.section}>

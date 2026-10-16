@@ -26,7 +26,7 @@ export default function UFFCase() {
           <div className={styles.coverOrb1} />
           <div className={styles.coverOrb2} />
           <div className={styles.coverInner}>
-            <img src="/work/uff/logo uff.png" alt="Logo UFF" className={styles.coverLogo} />
+            <img src="/work/uff/logo-uff.webp" alt="Logo UFF" className={styles.coverLogo} />
             <p className={styles.coverTagline}>UX Research · Usabilidade</p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function UFFCase() {
               e, junto com ele, a necessidade de validar se as mudanças realmente resolviam os problemas.
             </p>
             <div className={styles.imgWrap}>
-              <img src="/work/uff/tweets-insatisfacao.png" alt="Tweets de usuários insatisfeitos com o site da UFF" className={styles.caseImg} />
+              <img loading="lazy" decoding="async" src="/work/uff/tweets-insatisfacao.webp" alt="Tweets de usuários insatisfeitos com o site da UFF" className={styles.caseImg} />
             </div>
           </div>
 
@@ -148,7 +148,7 @@ export default function UFFCase() {
             </div>
 
             <div className={styles.imgWrap}>
-              <img src="/work/uff/novo-site.png" alt="Novo site da UFF — versão testada" className={styles.caseImg} />
+              <img loading="lazy" decoding="async" src="/work/uff/novo-site.webp" alt="Novo site da UFF — versão testada" className={styles.caseImg} />
             </div>
           </div>
 
@@ -165,11 +165,15 @@ export default function UFFCase() {
               a universidade a novos visitantes.
             </p>
             <div className={styles.imgWrap}>
-              <img src="/work/uff/resultado-sus.png" alt="Resultados SUS por segmento — média 82,95" className={styles.caseImg} />
+              <img loading="lazy" decoding="async" src="/work/uff/resultado-sus.webp" alt="Resultados SUS por segmento — média 82,95" className={styles.caseImg} />
             </div>
             <div className={styles.imgWrap} style={{ marginTop: 20 }}>
-              <img src="/work/uff/resultado-ab.png" alt="Resultados do teste A/B de preferência" className={styles.caseImg} />
+              <img loading="lazy" decoding="async" src="/work/uff/resultado-ab.webp" alt="Resultados do teste A/B de preferência" className={styles.caseImg} />
             </div>
+            <p className={styles.imgNote}>
+              Versão A é o site antigo da UFF; Versão B é o novo site institucional, que estava
+              sendo avaliado.
+            </p>
           </div>
 
           <div className={styles.section}>
@@ -203,6 +207,14 @@ export default function UFFCase() {
 
         </main>
       </div>
+
+      <footer className={styles.footer}>
+        <p>
+          Nos gráficos deste case, <strong>Versão A</strong> é o site institucional antigo da UFF e
+          <strong> Versão B</strong> é o novo site, que estava sendo avaliado. A comparação foi feita
+          com 22 participantes, em teste A/B de preferência, junto com o Teste Avaliativo e o SUS.
+        </p>
+      </footer>
 
     </div>
   )
